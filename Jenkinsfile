@@ -5,7 +5,7 @@ pipeline {
             when { changeRequest() }
             steps {
                echo 'Pulling...' + env.BRANCH_NAME
-               echo 'Building...' + env.CHANGE_ID
+               echo 'Building...' + env.CHANGE_TARGET
                checkout scm
             }
         }
