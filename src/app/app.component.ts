@@ -8,4 +8,5 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'application';
   public test: string;
+  private testLang: any = [];
 }
