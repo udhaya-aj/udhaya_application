@@ -1,13 +1,11 @@
 pipeline {
-    agent any
-
+    agent any 
     stages {
-       stage('Build') {
-    node {
-        echo 'Pulling...' + env.BRANCH_NAME
-        checkout scm
-
-    }
-}
+        stage('Example Build') {
+            steps {
+               echo 'Pulling...' + env.BRANCH_NAME
+               checkout scm
+            }
+        }
     }
 }
