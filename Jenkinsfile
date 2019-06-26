@@ -2,6 +2,7 @@ pipeline {
     agent any 
     stages {
         stage('Example Build') {
+            when { changeRequest target: 'master' }
             steps {
                checkout scm
                 echo 'Branch... ' + env.BRANCH_NAME
